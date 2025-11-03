@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Plant Disease Classification</h1>
+        <p>Upload an image of a plant leaf to classify its disease.</p>
+        
+        <div class="uploader">
+            <div id="image-preview">
+                <span class="placeholder">Your image will appear here</span>
+            </div>
+            <input type="file" id="image-upload" accept="image/*" style="display: none;">
+            <label for="image-upload" class="btn btn-upload">Choose Image</label>
+        </div>
+
+        <button id="predict-btn" class="btn btn-predict">Predict</button>
+        
+        <div id="result">
+            </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
